@@ -1,9 +1,6 @@
 import { REST, Routes } from "discord.js";
 import { readdirSync } from "fs";
 import { SproutClient, type Command } from "../types";
-import { config } from "dotenv";
-
-config();
 
 export default async function handleCommands(client: SproutClient) {
 	console.log("Command handler loaded.");
