@@ -6,7 +6,10 @@ import { execSync } from "child_process";
 
 config();
 
-export const revision = execSync("git rev-parse HEAD").toString().trim();
+export const revision = execSync("git rev-parse HEAD")
+	.toString()
+	.trim()
+	.substring(0, 7);
 
 console.log("Sprout @ " + revision);
 
