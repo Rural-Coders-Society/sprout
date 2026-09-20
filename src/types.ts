@@ -4,6 +4,7 @@ import {
 	Collection,
 	SlashCommandBuilder,
 	type ClientOptions,
+	type SlashCommandOptionsOnlyBuilder,
 	type SlashCommandSubcommandsOnlyBuilder,
 } from "discord.js";
 
@@ -31,7 +32,10 @@ export interface Event {
 }
 
 export interface Command {
-	data: SlashCommandBuilder | SlashCommandSubcommandsOnlyBuilder;
+	data:
+		| SlashCommandBuilder
+		| SlashCommandSubcommandsOnlyBuilder
+		| SlashCommandOptionsOnlyBuilder;
 	execute: (
 		interaction: ChatInputCommandInteraction,
 		client: SproutClient,
